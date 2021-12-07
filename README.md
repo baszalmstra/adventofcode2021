@@ -10,3 +10,4 @@ Advent of Code 2021 solutions written in Rust.
 |[Day 4: Giant Squid](https://adventofcode.com/2021/day/4)                  |[✓](src/bin/day4.rs)      |
 |[Day 5: Hydrothermal Venture](https://adventofcode.com/2021/day/5)         |[✓](src/bin/day5.rs)      |
 |[Day 6: Lanternfish](https://adventofcode.com/2021/day/6)                  |[✓](src/bin/day6.rs)      |
+|[Day 7: The Treachery of Whales](https://adventofcode.com/2021/day/7)      |[✓](src/bin/day7.rs)      |
