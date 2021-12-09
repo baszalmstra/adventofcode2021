@@ -1,4 +1,4 @@
-use itertools::{Itertools};
+use itertools::Itertools;
 
 struct Entry {
     signals: Vec<String>,
@@ -13,8 +13,14 @@ fn parse(input: &str) -> anyhow::Result<Vec<Entry>> {
                 .split_once(" | ")
                 .ok_or(anyhow::anyhow!("no delimiter found"))?;
             Ok(Entry {
-                signals: left.split_whitespace().map(|block| block.to_owned()).collect(),
-                digits: right.split_whitespace().map(|block| block.to_owned()).collect(),
+                signals: left
+                    .split_whitespace()
+                    .map(|block| block.to_owned())
+                    .collect(),
+                digits: right
+                    .split_whitespace()
+                    .map(|block| block.to_owned())
+                    .collect(),
             })
         })
         .collect()
