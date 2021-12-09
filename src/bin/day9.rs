@@ -53,40 +53,9 @@ fn main() -> anyhow::Result<()> {
         })
         .collect::<Vec<_>>();
 
-    fn find(basins: &mut [Cell], idx: usize) -> Option<usize> {
-        let basin_idx = match basins[idx] {
-            Cell::Basin(_) => idx,
-            Cell::PartOfBasin(basin) => {
-                let basin_idx = find(basins, basin).unwrap();
-                basins[idx] = Cell::PartOfBasin(basin_idx);
-                basin_idx
-            }
-            Cell::Border => return None,
-        };
-        Some(basin_idx)
-    }
-
-    fn union(basins: &mut [Cell], a: usize, b: usize) {
-        let basin_a = find(basins, a);
-        let basin_b = find(basins, b);
-        if basin_a == basin_b {
-            return;
-        }
-        if let (Some(a), Some(b)) = (basin_a, basin_b) {
-            match (basins[a], basins[b]) {
-                (Cell::Basin(a_count), Cell::Basin(b_count)) => {
-                    basins[b] = Cell::PartOfBasin(a);
-                    basins[a] = Cell::Basin(a_count + b_count);
-                }
-                _ => unreachable!(),
-            }
-        }
-    }
-
     for y in 0..height {
         for x in 0..width {
             let i = y * width + x;
-
             if let Cell::Border = basins[i] {
                 continue;
             } else {
@@ -106,7 +75,7 @@ fn main() -> anyhow::Result<()> {
         }
     }
 
-    let mut basin_count = basins
+    let total: usize = basins
         .into_iter()
         .filter_map(|c| {
             if let Cell::Basin(count) = c {
@@ -115,9 +84,10 @@ fn main() -> anyhow::Result<()> {
                 None
             }
         })
-        .collect_vec();
-    basin_count.sort_unstable();
-    let total: usize = basin_count.into_iter().rev().take(3).product();
+        .sorted_unstable()
+        .rev()
+        .take(3)
+        .product();
 
     println!("Solution 2: {}", total);
 
@@ -129,4 +99,34 @@ enum Cell {
     Basin(usize),
     PartOfBasin(usize),
     Border,
+}
+
+fn find(basins: &mut [Cell], idx: usize) -> Option<usize> {
+    let basin_idx = match basins[idx] {
+        Cell::Basin(_) => idx,
+        Cell::PartOfBasin(basin) => {
+            let basin_idx = find(basins, basin).unwrap();
+            basins[idx] = Cell::PartOfBasin(basin_idx);
+            basin_idx
+        }
+        Cell::Border => return None,
+    };
+    Some(basin_idx)
+}
+
+fn union(basins: &mut [Cell], a: usize, b: usize) {
+    let basin_a = find(basins, a);
+    let basin_b = find(basins, b);
+    if basin_a == basin_b {
+        return;
+    }
+    if let (Some(a), Some(b)) = (basin_a, basin_b) {
+        match (basins[a], basins[b]) {
+            (Cell::Basin(a_count), Cell::Basin(b_count)) => {
+                basins[b] = Cell::PartOfBasin(a);
+                basins[a] = Cell::Basin(a_count + b_count);
+            }
+            _ => unreachable!(),
+        }
+    }
 }
