@@ -13,3 +13,4 @@ Advent of Code 2021 solutions written in Rust.
 |[Day 7: The Treachery of Whales](https://adventofcode.com/2021/day/7)      |[✓](src/bin/day7.rs)      |
 |[Day 8: Seven Segment Search](https://adventofcode.com/2021/day/8)         |[✓](src/bin/day8.rs)      |
 |[Day 9: Smoke Basin](https://adventofcode.com/2021/day/9)                  |[✓](src/bin/day9.rs)      |
+|[Day 10: Syntax Scoring](https://adventofcode.com/2021/day/10)             |[✓](src/bin/day10.rs)     |
