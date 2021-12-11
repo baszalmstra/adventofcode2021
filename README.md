@@ -14,3 +14,4 @@ Advent of Code 2021 solutions written in Rust.
 |[Day 8: Seven Segment Search](https://adventofcode.com/2021/day/8)         |[✓](src/bin/day8.rs)      |
 |[Day 9: Smoke Basin](https://adventofcode.com/2021/day/9)                  |[✓](src/bin/day9.rs)      |
 |[Day 10: Syntax Scoring](https://adventofcode.com/2021/day/10)             |[✓](src/bin/day10.rs)     |
+|[Day 11: Dumbo Octopus](https://adventofcode.com/2021/day/11)              |[✓](src/bin/day11.rs)     |
