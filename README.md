@@ -15,3 +15,4 @@ Advent of Code 2021 solutions written in Rust.
 |[Day 9: Smoke Basin](https://adventofcode.com/2021/day/9)                  |[✓](src/bin/day9.rs)      |
 |[Day 10: Syntax Scoring](https://adventofcode.com/2021/day/10)             |[✓](src/bin/day10.rs)     |
 |[Day 11: Dumbo Octopus](https://adventofcode.com/2021/day/11)              |[✓](src/bin/day11.rs)     |
+|[Day 12: Passage Pathing](https://adventofcode.com/2021/day/12)            |[✓](src/bin/day12.rs)     |
