@@ -18,3 +18,4 @@ Advent of Code 2021 solutions written in Rust.
 |[Day 12: Passage Pathing](https://adventofcode.com/2021/day/12)            |[✓](src/bin/day12.rs)     |
 |[Day 13: Transparent Origami](https://adventofcode.com/2021/day/13)        |[✓](src/bin/day13.rs)     |
 |[Day 14: Extended Polymerization](https://adventofcode.com/2021/day/14)    |[✓](src/bin/day14.rs)     |
+|[Day 15: Chiton](https://adventofcode.com/2021/day/15)                     |[✓](src/bin/day15.rs)     |
