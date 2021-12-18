@@ -6,7 +6,6 @@ struct Node {
     is_end: bool,
     is_start: bool,
     idx: usize,
-    name: String,
 }
 
 struct Graph {
@@ -41,7 +40,6 @@ impl Graph {
                 is_end: name == "end",
                 is_start: name == "start",
                 idx: self.nodes.len(),
-                name,
             };
             self.nodes.push(node);
             idx

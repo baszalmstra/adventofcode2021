@@ -16,3 +16,4 @@ Advent of Code 2021 solutions written in Rust.
 |[Day 10: Syntax Scoring](https://adventofcode.com/2021/day/10)             |[✓](src/bin/day10.rs)     |
 |[Day 11: Dumbo Octopus](https://adventofcode.com/2021/day/11)              |[✓](src/bin/day11.rs)     |
 |[Day 12: Passage Pathing](https://adventofcode.com/2021/day/12)            |[✓](src/bin/day12.rs)     |
+|[Day 13: Transparent Origami](https://adventofcode.com/2021/day/13)        |[✓](src/bin/day13.rs)     |
