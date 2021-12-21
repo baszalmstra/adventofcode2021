@@ -20,3 +20,4 @@ Advent of Code 2021 solutions written in Rust.
 |[Day 14: Extended Polymerization](https://adventofcode.com/2021/day/14)    |[✓](src/bin/day14.rs)     |
 |[Day 15: Chiton](https://adventofcode.com/2021/day/15)                     |[✓](src/bin/day15.rs)     |
 |[Day 16: Packet Decoder](https://adventofcode.com/2021/day/16)             |[✓](src/bin/day16.rs)     |
+|[Day 17: Trick Shot](https://adventofcode.com/2021/day/17)                 |[✓](src/bin/day17.rs)     |
