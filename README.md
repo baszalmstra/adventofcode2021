@@ -21,3 +21,4 @@ Advent of Code 2021 solutions written in Rust.
 |[Day 15: Chiton](https://adventofcode.com/2021/day/15)                     |[✓](src/bin/day15.rs)     |
 |[Day 16: Packet Decoder](https://adventofcode.com/2021/day/16)             |[✓](src/bin/day16.rs)     |
 |[Day 17: Trick Shot](https://adventofcode.com/2021/day/17)                 |[✓](src/bin/day17.rs)     |
+|[Day 18: Snailfish](https://adventofcode.com/2021/day/18)                  |[✓](src/bin/day18.rs)     |
